@@ -1,18 +1,57 @@
-FROM quay.io/fedora-ostree-desktops/sericea:rawhide
+FROM quay.io/fedora-ostree-desktops/silverblue:38
 
 RUN rpm-ostree override remove \
-    sddm \
-    sddm-x11
-
-# RUN rpm-ostree override remove \
-#     firefox \
-#     gnome-software \
-#     gnome-tour \
-#     gnome-terminal \
-#     yelp \
-#     firefox-langpacks \
-#     gnome-software-rpm-ostree \
-#     gnome-terminal-nautilus
+    firefox \
+    gnome-software \
+    gnome-tour \
+    gnome-terminal \
+    yelp \
+    firefox-langpacks \
+    gnome-software-rpm-ostree \
+    gnome-terminal-nautilus \
+    NetworkManager \
+    NetworkManager-adsl \
+    NetworkManager-bluetooth \
+    NetworkManager-cloud-setup \
+    NetworkManager-config-connectivity-fedora \
+    NetworkManager-config-server \
+    NetworkManager-dispatcher-routing-rules \
+    NetworkManager-fortisslvpn \
+    NetworkManager-fortisslvpn-gnome \
+    NetworkManager-initscripts-ifcfg-rh \
+    NetworkManager-initscripts-updown \
+    NetworkManager-iodine \
+    NetworkManager-iodine-gnome \
+    NetworkManager-l2tp \
+    NetworkManager-l2tp-gnome \
+    NetworkManager-libnm \
+    NetworkManager-libnm \
+    NetworkManager-libnm-devel \
+    NetworkManager-libnm-devel \
+    NetworkManager-libreswan \
+    NetworkManager-libreswan-gnome \
+    NetworkManager-openconnect \
+    NetworkManager-openconnect-gnome \
+    NetworkManager-openvpn \
+    NetworkManager-openvpn-gnome \
+    NetworkManager-ovs \
+    NetworkManager-ppp \
+    NetworkManager-pptp \
+    NetworkManager-pptp-gnome \
+    NetworkManager-ssh \
+    NetworkManager-ssh-gnome \
+    NetworkManager-sstp \
+    NetworkManager-sstp-gnome \
+    NetworkManager-strongswan \
+    NetworkManager-strongswan-gnome \
+    NetworkManager-team \
+    NetworkManager-tui \
+    NetworkManager-vpnc \
+    NetworkManager-vpnc-gnome \
+    NetworkManager-wifi \
+    NetworkManager-wwan \
+    PackageKit \
+    gnome-packagekit
 
 RUN rpm-ostree install \
     gdm \
@@ -21,7 +60,9 @@ RUN rpm-ostree install \
     gnome-tweaks \
     alacritty \
     distrobox \
-    zsh
+    zsh \
+    iwd \
+    wireguard-tools
 
 RUN rpm-ostree cleanup -m
 
