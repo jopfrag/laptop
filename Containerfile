@@ -25,8 +25,6 @@ RUN rpm-ostree override remove \
     NetworkManager-l2tp \
     NetworkManager-l2tp-gnome \
     NetworkManager-libnm \
-    NetworkManager-libnm \
-    NetworkManager-libnm-devel \
     NetworkManager-libnm-devel \
     NetworkManager-libreswan \
     NetworkManager-libreswan-gnome \
