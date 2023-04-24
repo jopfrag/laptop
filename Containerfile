@@ -1,8 +1,4 @@
-FROM quay.io/fedora-ostree-desktops/sericea:38
-
-RUN rpm-ostree override remove \
-    sddm \
-    sddm-x11
+FROM quay.io/fedora-ostree-desktops/buildroot:38
 
 RUN rpm-ostree install \
     gdm \
