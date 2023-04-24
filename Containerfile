@@ -5,7 +5,10 @@ RUN rpm-ostree override remove \
     gnome-software \
     gnome-tour \
     gnome-terminal \
-    yelp
+    yelp \
+    firefox-langpacks \
+    gnome-software-rpm-ostree \
+    gnome-terminal-nautilus
 
 RUN rpm-ostree install \
     gnome-system-monitor \
