@@ -1,4 +1,4 @@
-FROM quay.io/fedora-ostree-desktops/buildroot:38
+FROM quay.io/fedora-ostree-desktops/buildroot:latest
 
 RUN rpm-ostree install \
     gdm \
