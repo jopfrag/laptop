@@ -12,7 +12,6 @@ RUN rpm-ostree override remove \
     NetworkManager \
     NetworkManager-adsl \
     NetworkManager-bluetooth \
-    NetworkManager-cloud-setup \
     NetworkManager-config-connectivity-fedora \
     NetworkManager-config-server \
     NetworkManager-dispatcher-routing-rules \
