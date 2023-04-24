@@ -1,4 +1,8 @@
-FROM quay.io/fedora-ostree-desktops/base:rawhide
+FROM quay.io/fedora-ostree-desktops/sericea:rawhide
+
+RUN rpm-ostree override remove \
+    sddm \
+    sddm-x11
 
 # RUN rpm-ostree override remove \
 #     firefox \
