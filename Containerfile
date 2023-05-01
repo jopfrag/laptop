@@ -1,17 +1,33 @@
-FROM quay.io/fedora-ostree-desktops/base:38
+FROM quay.io/fedora-ostree-desktops/base:rawhide
 
 RUN rpm-ostree install \
-    # gdm \
-    # gnome-shell \
+    gdm \
+    gnome-shell
+
+RUN rpm-ostree install \
+    gnome-online-accounts \
+    gnome-software \
     gnome-system-monitor \
-    gnome-tweaks \
+    gnome-tweaks
+
+RUN rpm-ostree install \
+    mousetweaks \
+    xdg-user-dirs-gtk
+
+RUN rpm-ostree install \
+    NetworkManager \
+    NetworkManager-openvpn-gnome \
+    NetworkManager-wifi \
+    wireguard-tools
+
+RUN rpm-ostree install \
     alacritty \
     distrobox \
-    zsh \
-    iwd \
-    wireguard-tools \
-    sway \
-    waybar
+    zsh
+
+RUN rpm-ostree override remove \
+    nm-connection-editor \
+    gnome-tour
 
 RUN rm var/lib/gdm/.config/pulse/default.pa
 
