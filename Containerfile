@@ -25,6 +25,11 @@ RUN rpm-ostree install \
     distrobox \
     zsh
 
+RUN rpm-ostree install \
+    xorg-x11-drv-amdgpu \
+    amd-gpu-firmware \
+    wayland-utils
+    
 RUN rpm-ostree override remove \
     nm-connection-editor \
     gnome-tour
