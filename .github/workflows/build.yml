@@ -25,9 +25,9 @@ jobs:
       fail-fast: false
       matrix:
         image_flavor: [main]
-        major_version: [42]
+        major_version: [43]
         include:
-          - major_version: 42
+          - major_version: 43
             is_latest_version: true
             is_stable_version: true
     steps: 

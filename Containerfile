@@ -1,4 +1,4 @@
-FROM quay.io/fedora-ostree-desktops/base:rawhide
+FROM quay.io/fedora-ostree-desktops/base:38
 
 RUN rpm-ostree install \
     gdm \
@@ -29,7 +29,7 @@ RUN rpm-ostree install \
     xorg-x11-drv-amdgpu \
     amd-gpu-firmware \
     wayland-utils
-    
+
 RUN rpm-ostree override remove \
     nm-connection-editor \
     gnome-tour
