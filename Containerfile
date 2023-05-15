@@ -1,302 +1,77 @@
-FROM quay.io/fedora-ostree-desktops/base:38
+FROM quay.io/fedora-ostree-desktops/base:rawhide
 
 RUN rpm-ostree install \
-  NetworkManager \
-  NetworkManager-config-connectivity-fedora \
-  NetworkManager-wifi \
-  abattis-cantarell-vf-fonts \
-  acl \
-  adwaita-qt5 \
-  alsa-ucm \
-  alsa-utils \
-  amd-gpu-firmware \
-  atheros-firmware \
-  attr \
-  audit \
-  b43-fwcutter \
-  b43-openfwwf \
-  basesystem \
-  bash \
-  bash-completion \
-  bc \
-  bind-utils \
-  bluez-cups \
-  brcmfmac-firmware \
-  btrfs-progs \
-  bzip2 \
-  chrony \
-  cifs-utils \
-  colord \
-  compsize \
-  coreutils \
-  cpio \
-  cryptsetup \
-  cups \
-  cups-browsed \
-  cups-filters \
-  curl \
-  cyrus-sasl-plain \
-  default-editor \
-  dhcp-client \
-  dnsmasq \
-  e2fsprogs \
-  ethtool \
-  exfatprogs \
-  fedora-bookmarks \
-  fedora-chromium-config \
-  fedora-flathub-remote \
-  fedora-repos-modular \
-  fedora-workstation-backgrounds \
-  fedora-workstation-repositories \
-  file \
-  filesystem \
-  firefox \
-  firewalld \
-  fpaste \
-  fros-gnome \
-  fwupd \
-  gamemode \
-  glibc \
-  glibc-all-langpacks \
-  glx-utils \
-  gnupg2 \
-  google-noto-emoji-color-fonts \
-  google-noto-naskh-arabic-vf-fonts \
-  google-noto-sans-arabic-vf-fonts \
-  google-noto-sans-armenian-vf-fonts \
-  google-noto-sans-canadian-aboriginal-vf-fonts \
-  google-noto-sans-cherokee-vf-fonts \
-  google-noto-sans-cjk-vf-fonts \
-  google-noto-sans-ethiopic-vf-fonts \
-  google-noto-sans-georgian-vf-fonts \
-  google-noto-sans-gurmukhi-vf-fonts \
-  google-noto-sans-hebrew-vf-fonts \
-  google-noto-sans-khmer-vf-fonts \
-  google-noto-sans-lao-vf-fonts \
-  google-noto-sans-math-fonts \
-  google-noto-sans-mono-vf-fonts \
-  google-noto-sans-sinhala-vf-fonts \
-  google-noto-sans-thaana-vf-fonts \
-  google-noto-sans-thai-vf-fonts \
-  google-noto-sans-vf-fonts \
-  google-noto-serif-vf-fonts \
-  gstreamer1-plugin-libav \
-  gstreamer1-plugins-bad-free \
-  gstreamer1-plugins-good \
-  gstreamer1-plugins-ugly-free \
-  gutenprint \
-  gutenprint-cups \
-  hostname \
-  hplip \
-  hunspell \
-  ibus-anthy \
-  ibus-gtk3 \
-  ibus-gtk4 \
-  ibus-hangul \
-  ibus-libpinyin \
-  ibus-libzhuyin \
-  ibus-m17n \
-  ibus-typing-booster \
-  intel-gpu-firmware \
-  iproute \
-  iptables-nft \
-  iptstate \
-  iputils \
-  iwl100-firmware \
-  iwl1000-firmware \
-  iwl105-firmware \
-  iwl135-firmware \
-  iwl2000-firmware \
-  iwl2030-firmware \
-  iwl3160-firmware \
-  iwl3945-firmware \
-  iwl4965-firmware \
-  iwl5000-firmware \
-  iwl5150-firmware \
-  iwl6000-firmware \
-  iwl6000g2a-firmware \
-  iwl6000g2b-firmware \
-  iwl6050-firmware \
-  iwl7260-firmware \
-  iwlax2xx-firmware \
-  jomolhari-fonts \
-  kbd \
-  kernel \
-  kernel-modules-extra \
-  less \
-  liberation-mono-fonts \
-  liberation-sans-fonts \
-  liberation-serif-fonts \
-  libertas-usb8388-firmware \
-  libglvnd-gles \
-  linux-firmware \
-  logrotate \
-  lohit-assamese-fonts \
-  lohit-bengali-fonts \
-  lohit-devanagari-fonts \
-  lohit-gujarati-fonts \
-  lohit-kannada-fonts \
-  lohit-marathi-fonts \
-  lohit-odia-fonts \
-  lohit-tamil-fonts \
-  lohit-telugu-fonts \
-  lrzsz \
-  lsof \
-  man-db \
-  man-pages \
-  mdadm \
+  ModemManager \
+  NetworkManager-adsl \
+  NetworkManager-openconnect-gnome \
+  NetworkManager-openvpn-gnome \
+  NetworkManager-ppp \
+  NetworkManager-pptp-gnome \
+  NetworkManager-ssh-gnome \
+  NetworkManager-vpnc-gnome \
+  NetworkManager-wwan \
+  adobe-source-code-pro-fonts \
+  at-spi2-atk \
+  at-spi2-core \
+  avahi \
+  dconf \
+  fprintd-pam \
+  gdm \
+  glib-networking \
+  gnome-backgrounds \
+  gnome-bluetooth \
+  gnome-browser-connector \
+  gnome-classic-session \
+  gnome-color-manager \
+  gnome-control-center \
+  gnome-disk-utility \
+  gnome-initial-setup \
+  gnome-remote-desktop \
+  gnome-session-wayland-session \
+  gnome-session-xsession \
+  gnome-settings-daemon \
+  gnome-shell \
+  gnome-software \
+  gnome-system-monitor \
+  gnome-terminal \
+  gnome-terminal-nautilus \
+  gnome-user-docs \
+  gnome-user-share \
+  gvfs-afc \
+  gvfs-afp \
+  gvfs-archive \
+  gvfs-fuse \
+  gvfs-goa \
+  gvfs-gphoto2 \
+  gvfs-mtp \
+  gvfs-smb \
+  libproxy-duktape \
+  librsvg2 \
+  libsane-hpaio \
   mesa-dri-drivers \
-  mesa-vulkan-drivers \
-  mpage \
-  mt7xxx-firmware \
-  mtr \
-  nfs-utils \
-  nss-altfiles \
-  nss-mdns \
-  ntfs-3g \
-  ntfsprogs \
-  nvidia-gpu-firmware \
-  opensc \
-  openssh-clients \
-  openssh-server \
-  paktype-naskh-basic-fonts \
-  pam_afs_session \
-  paps \
-  passwd \
-  passwdqc \
-  pciutils \
-  pinfo \
-  pipewire-alsa \
-  pipewire-gstreamer \
-  pipewire-pulseaudio \
-  pipewire-utils \
-  plocate \
-  plymouth \
-  plymouth-system-theme \
-  policycoreutils \
-  policycoreutils-python-utils \
-  procps-ng \
-  psmisc \
-  qemu-guest-agent \
-  qt5-qtbase \
-  qt5-qtbase-gui \
-  qt5-qtdeclarative \
-  qt5-qtxmlpatterns \
-  quota \
-  realmd \
-  realtek-firmware \
-  rit-meera-new-fonts \
-  rootfiles \
-  rpm \
-  rsync \
-  samba-client \
-  selinux-policy-targeted \
-  setup \
-  shadow-utils \
-  sil-mingzat-fonts \
-  sil-nuosu-fonts \
-  sil-padauk-fonts \
-  sos \
-  spice-vdagent \
-  spice-webdavd \
-  sssd \
-  sssd-common \
-  sssd-kcm \
-  stix-fonts \
-  sudo \
-  system-config-printer-udev \
-  systemd \
+  mesa-libEGL \
+  nautilus \
+  orca \
+  polkit \
+  rygel \
   systemd-oomd-defaults \
-  systemd-resolved \
-  systemd-udev \
-  tar \
-  time \
-  toolbox \
-  tree \
-  unzip \
-  uresourced \
-  usb_modeswitch \
-  usbutils \
-  util-linux \
-  vazirmatn-vf-fonts \
-  vim-minimal \
-  wget \
-  which \
-  whois \
-  wireplumber \
-  words \
-  wpa_supplicant \
-  xorg-x11-drv-amdgpu \
-  xorg-x11-drv-ati \
-  xorg-x11-drv-evdev \
-  xorg-x11-drv-fbdev \
-  xorg-x11-drv-libinput \
-  xorg-x11-drv-nouveau \
-  xorg-x11-drv-qxl \
-  xorg-x11-drv-wacom \
-  xorg-x11-server-Xorg \
-  xorg-x11-xauth \
-  xorg-x11-xinit \
-  zip \
-  zram-generator-defaults \
-  alsa-sof-firmware \
-  hyperv-daemons \
-  mcelog \
-  microcode_ctl \
-  open-vm-tools-desktop \
-  thermald \
-  virtualbox-guest-additions \
-  xorg-x11-drv-intel \
-  xorg-x11-drv-openchrome \
-  xorg-x11-drv-vesa \
-  xorg-x11-drv-vmware
-
-RUN rpm-ostree install \
-  git-core \
-  git-core-doc \
-  rpm-ostree \
-  ostree-grub2 \
-  buildah \
-  podman \
-  skopeo \
-  distrobox \
-  flatpak \
+  tracker \
+  tracker-miners \
   xdg-desktop-portal \
-  fedora-repos-ostree \
-  fedora-repos-archive
+  xdg-desktop-portal-gnome \
+  xdg-desktop-portal-gtk \
+  xdg-user-dirs-gtk \
+  yelp
 
 RUN rpm-ostree install \
-NetworkManager-openvpn-gnome \
-dconf \
-gdm \
-gnome-bluetooth \
-gnome-color-manager \
-gnome-control-center \
-gnome-disk-utility \
-gnome-session-wayland-session \
-gnome-settings-daemon \
-gnome-shell \
-gnome-software \
-gnome-system-monitor \
-gvfs-archive \
-gvfs-goa \
-gvfs-mtp \
-libsane-hpaio \
-mesa-dri-drivers \
-mesa-libEGL \
-nautilus \
-polkit \
-tracker \
-tracker-miners \
-xdg-desktop-portal \
-xdg-desktop-portal-gnome \
-xdg-user-dirs-gtk
-
-RUN rpm-ostree install \
-    fedora-release-silverblue \
-    pinentry-gnome3 \
-    evince-thumbnailer \
-    evince-previewer
+  fedora-release-silverblue \
+  desktop-backgrounds-gnome \
+  gnome-shell-extension-background-logo \
+  pinentry-gnome3 \
+  qgnomeplatform-qt5 \
+  evince-thumbnailer \
+  evince-previewer \
+  totem-video-thumbnailer
 
 RUN rm var/lib/gdm/.config/pulse/default.pa
 
